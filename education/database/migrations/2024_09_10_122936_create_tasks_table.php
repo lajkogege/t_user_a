@@ -19,6 +19,7 @@ return new class extends Migration
             $table->boolean('status')->default(0);
             //itt ilyen nevű mező )létre is hozom) össze kötése egy olyan nevű mezőben abban a táblában 
             $table->foreignId('user_id')->references('id')->on('users');
+            $table->project_id('id')->references('id')->on('users');
             $table->timestamps();
         });
     }
